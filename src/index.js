@@ -32,11 +32,14 @@ class Confirm extends React.Component{
         else if(mode == "submit" || mode == "submitted"){
             this.setState({mode: "submit"});
         }
+        else if(mode == "submitting"){
+            this.setState({mode: "submitting"});
+        }
         else if(mode == "delay" || mode == "delayed"){
             this.setState({mode: "delay"});
         }
         else{
-            if(this.state.mode != "submit"){
+            if(this.state.mode != "submit" && this.state.mode != "submitting"){
                 this.setState({mode: ""});
             }
         }
@@ -46,12 +49,10 @@ class Confirm extends React.Component{
         var handleClick = this.props.onClick;
         var eventHandler = submitHandler(this);
 
+        this.onChangeMode("submitting");
         var result = handleClick(evt, eventHandler);
         if(result !== false){
             this.onChangeMode("submit");
-        }
-        else{
-            this.onChangeMode("delay");
         }
     }
 
@@ -120,7 +121,7 @@ class Confirm extends React.Component{
                     </button>;
             }
         }
-        else if(this.state.mode == "delay"){
+        else if(this.state.mode == "delay" || this.state.mode == "submitting"){
             var delay = this.props.delay || {};
             var delayContent = delay.content;
             var content = delayContent || "Loading...";

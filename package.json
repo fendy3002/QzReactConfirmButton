@@ -1,5 +1,5 @@
 {
-  "name": "@qz/react-confirm-button",
+  "name": "@fendy3002/react-confirm-button",
   "version": "0.1.0",
   "description": "React component - Confirmation button",
   "main": "src/index.js",

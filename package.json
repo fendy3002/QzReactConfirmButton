@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node_modules/.bin/babel-node src/tests/index.js"
+    "start": "node_modules/.bin/babel-node src/tests/server.js"
   },
   "repository": {
     "type": "git",

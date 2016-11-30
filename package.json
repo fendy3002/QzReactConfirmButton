@@ -1,8 +1,8 @@
 {
   "name": "@fendy3002/react-confirm-button",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React component - Confirmation button",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/babel-node src/tests/server.js"
